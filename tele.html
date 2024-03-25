@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rainbow Circle-Cube</title>
+<meta charset="UTF-8" />
+<style>
+body {
+margin: 0;
+background: black;
+overflow: hidden;
+}
+#hoverelem {
+margin: 0px;
+color: white;
+background: red;
+width: 200px;
+height: 200px;
+border: 10px solid green;
+border-radius: 20px;
+cursor: pointer;
+transition: 5s all;
+font-size: 20px;
+text-align: center;
+font-weight: 800;
+}
+#hoverelem:hover{
+border-radius: 50%;
+filter: hue-rotate(360deg);
+transform: rotate(-360deg);
+margin: 200px;
+font-size: 30px;
+}
+p {
+position: absolute;
+background: green;
+border: 4px solid purple;
+border-radius: 8px;
+color: black;
+width: 300px;
+height: 100px;
+font-weight: 800;
+text-align: center;
+animation: animate 20s linear infinite;
+}
+@keyframes animate {
+0% {
+filter: hue-rotate(0deg);
+transform: rotate(0deg);
+}
+100% {
+filter: hue-rotate(360deg);
+transform: rotate(-360deg);
+}
+}
+</style>
+</head>
+<body>
+<div id="hoverelem" onclick="clickFunc()">Hover Me</div>
+<p>It's easy!</p>
+<script type="text-javascript">
+alert("Please, hover and click the element");
+function clickFunc() {
+alert("who is there? I don't know you!");
+}
+</script>
+</body>
+</html>
